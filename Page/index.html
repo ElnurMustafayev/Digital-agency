@@ -3,9 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Digital agency</title>
-    <link rel="stylesheet" href="Styles/Normalize.css" />
+
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css"
+    />
+
+    <!-- font icons -->
+    <script
+      src="https://kit.fontawesome.com/d4d91b1b46.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- my styles -->
     <link rel="stylesheet" href="Styles/Style.css" />
-    <script src="/JS/JQuery-3.5.1.js"></script>
+
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -57,17 +74,54 @@
         </nav>
       </header>
 
-      <!-- c o n t e n t  -->
+      <!-- h e a d e r    c o n t e n t  -->
       <div class="header-content">
         <div class="getting-started">
           <hr class="small" />
           <h1>We're a digital agency.</h1>
-          <a href="#"
-            ><div class="fill"></div>
+          <a href="#">
+            <div class="fill"></div>
             Getting Started</a
           >
         </div>
       </div>
+
+      <!-- h e a d e r     i t e m s -->
+      <div class="items">
+        <!-- 1 ITEM -->
+        <a href="#" class="selected item">
+          <i class="fas fa-tasks"></i>
+          <p class="header">Future Vision.</p>
+          <hr />
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            maiores aut ducimus rem aliquam dolorum?
+          </p>
+        </a>
+
+        <!-- 2 ITEM -->
+        <a href="#" class="item">
+          <i class="fas fa-rocket"></i>
+          <p class="header">Product Design.</p>
+          <hr />
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            maiores aut ducimus rem aliquam dolorum?
+          </p>
+        </a>
+
+        <!-- 3 ITEM -->
+        <a href="#" class="item">
+          <i class="fas fa-chart-pie"></i>
+          <p class="header">Inovative Solutions.</p>
+          <hr />
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            maiores aut ducimus rem aliquam dolorum?
+          </p>
+        </a>
+      </div>
+      
     </div>
   </body>
   <script src="app.js"></script>

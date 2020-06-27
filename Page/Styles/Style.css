@@ -1,19 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
   font-family: "Lato", sans-serif;
 }
 
-body a {
+html body a {
   text-decoration: none;
 }
 
-body div.container {
+html body div.container {
   background-color: black;
   max-width: 1900px;
   margin: auto;
 }
 
-body div.container header {
+html body div.container header {
   margin: auto 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,7 +25,7 @@ body div.container header {
   height: 170px;
 }
 
-body div.container header div.logo {
+html body div.container header div.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,19 +35,19 @@ body div.container header div.logo {
   margin: 40px;
 }
 
-body div.container header div.logo img {
+html body div.container header div.logo img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
   width: 170px;
 }
 
-body div.container header nav {
+html body div.container header nav {
   font-weight: bold;
   width: 100%;
 }
 
-body div.container header nav ul {
+html body div.container header nav ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,12 +65,12 @@ body div.container header nav ul {
       justify-content: space-around;
 }
 
-body div.container header nav ul .selected-line {
+html body div.container header nav ul .selected-line {
   background-color: #E9204F !important;
   width: 70% !important;
 }
 
-body div.container header nav ul .line {
+html body div.container header nav ul .line {
   width: 0;
   margin-top: 1px;
   height: 2px;
@@ -75,20 +79,20 @@ body div.container header nav ul .line {
   background-color: white;
 }
 
-body div.container header nav ul li:hover .line {
+html body div.container header nav ul li:hover .line {
   background-color: #E9204F;
   width: 70%;
 }
 
-body div.container header nav ul a {
+html body div.container header nav ul a {
   color: white;
 }
 
-body div.container div.header-content {
+html body div.container div.header-content {
   background-color: white;
 }
 
-body div.container div.header-content div.getting-started {
+html body div.container div.header-content div.getting-started {
   padding: 50px;
   background-color: black;
   color: white;
@@ -106,11 +110,11 @@ body div.container div.header-content div.getting-started {
       justify-content: space-around;
 }
 
-body div.container div.header-content div.getting-started > * {
+html body div.container div.header-content div.getting-started > * {
   margin: 40px 0px;
 }
 
-body div.container div.header-content div.getting-started hr.small {
+html body div.container div.header-content div.getting-started hr.small {
   border-width: 0px;
   height: 3px;
   width: 70px;
@@ -119,14 +123,14 @@ body div.container div.header-content div.getting-started hr.small {
   background-color: #E9204F;
 }
 
-body div.container div.header-content div.getting-started h1 {
+html body div.container div.header-content div.getting-started h1 {
   margin: 0px;
   font-size: 92px;
   font-weight: 900;
   width: 70%;
 }
 
-body div.container div.header-content div.getting-started a {
+html body div.container div.header-content div.getting-started a {
   border: 2px solid #E9204F;
   color: white;
   padding: 15px 30px;
@@ -135,7 +139,7 @@ body div.container div.header-content div.getting-started a {
   font-weight: bold;
 }
 
-body div.container div.header-content div.getting-started a .fill {
+html body div.container div.header-content div.getting-started a .fill {
   position: absolute;
   background-color: #E9204F;
   z-index: -1;
@@ -150,7 +154,72 @@ body div.container div.header-content div.getting-started a .fill {
           transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
 }
 
-body div.container div.header-content div.getting-started a:hover .fill {
+html body div.container div.header-content div.getting-started a:hover .fill {
   width: 100%;
+}
+
+html body div.container div.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px;
+}
+
+html body div.container div.items * {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+html body div.container div.items a.item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 200px;
+  background-color: #222222;
+  color: white;
+  padding: 40px 20px;
+  margin: 20px;
+}
+
+html body div.container div.items a.item hr {
+  color: #E9204F;
+}
+
+html body div.container div.items a.item i.fas {
+  color: #E9204F;
+  font-size: 44px;
+}
+
+html body div.container div.items a.item p.header {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+html body div.container div.items a.item p.content {
+  line-height: 24px;
+  margin: 0;
+}
+
+html body div.container div.items a.item:hover {
+  background-color: #E9204F;
+}
+
+html body div.container div.items a.item:hover i.fas,
+html body div.container div.items a.item:hover hr {
+  color: white;
+}
+
+html body div.container div.items a.selected {
+  background-color: #E9204F;
+}
+
+html body div.container div.items a.selected i.fas,
+html body div.container div.items a.selected hr {
+  color: white;
 }
 /*# sourceMappingURL=Style.css.map */

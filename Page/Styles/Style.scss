@@ -3,132 +3,191 @@ $Trade-gothic: 'Lato',
 sans-serif;
 $Dark-pink: #E9204F;
 
-body {
-    font-family: $Trade-gothic;
+html {
+    scroll-behavior: smooth;
+    body {
+        font-family: $Trade-gothic;
 
-    a {
-        text-decoration: none;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    div.container {
-        background-color: black;
-        max-width: 1900px;
-        margin: auto;
+        div.container {
+            background-color: black;
+            max-width: 1900px;
+            margin: auto;
 
-        // H E A D E R
-        header {
-            margin: auto 50px;
-            display: flex;
-            height: 170px;
-
-            div.logo {
+            // H E A D E R
+            header {
+                margin: auto 50px;
                 display: flex;
-                align-items: center;
-                margin: 40px;
+                height: 170px;
 
-                img {
-                    box-sizing: border-box;
-                    display: block;
-                    width: 170px;
+                div.logo {
+                    display: flex;
+                    align-items: center;
+                    margin: 40px;
+
+                    img {
+                        box-sizing: border-box;
+                        display: block;
+                        width: 170px;
+                    }
+                }
+
+                nav {
+                    font-weight: bold;
+                    width: 100%;
+
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        .selected-line {
+                            background-color: $Dark-pink !important;
+                            width: 70% !important;
+                        }
+
+                        .line {
+                            width: 0;
+                            margin-top: 1px;
+                            height: 2px;
+                            transition: 0.5s;
+                            background-color: white;
+                        }
+
+                        li:hover .line {
+                            background-color: $Dark-pink;
+                            width: 70%;
+                        }
+
+                        a {
+                            color: white;
+                        }
+                    }
                 }
             }
 
-            nav {
-                font-weight: bold;
-                width: 100%;
+            // M A I N
+            div.header-content {
+                background-color: white;
 
-                ul {
-                    list-style: none;
+                div.getting-started {
+                    padding: 50px;
+                    background-color: black;
+                    color: white;
                     display: flex;
-                    flex-direction: row;
-                    margin: 0;
-                    height: 100%;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
                     justify-content: space-around;
 
-                    .selected-line {
-                        background-color: $Dark-pink !important;
-                        width: 70% !important;
+                    >* {
+                        margin: 40px 0px;
                     }
 
-                    .line {
-                        width: 0;
-                        margin-top: 1px;
-                        height: 2px;
-                        transition: 0.5s;
-                        background-color: white;
-                    }
-
-                    li:hover .line {
+                    hr.small {
+                        border-width: 0px;
+                        height: 3px;
+                        width: 70px;
+                        margin: 0;
+                        margin-bottom: 30px;
                         background-color: $Dark-pink;
+                    }
+
+                    h1 {
+                        margin: 0px;
+                        font-size: 92px;
+                        font-weight: 900;
                         width: 70%;
                     }
 
                     a {
+                        border: 2px solid $Dark-pink;
                         color: white;
+                        padding: 15px 30px;
+                        position: relative;
+                        z-index: 0;
+                        font-weight: bold;
+
+                        .fill {
+                            position: absolute;
+                            background-color: $Dark-pink;
+                            z-index: -1;
+                            width: 0%;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            transition-duration: 0.5s;
+                            transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
+                        }
+
+                        &:hover .fill {
+                            width: 100%;
+                        }
                     }
                 }
             }
-        }
 
-        // M A I N
-        div.header-content {
-            background-color: white;
-
-            div.getting-started {
-                padding: 50px;
-                background-color: black;
-                color: white;
+            div.items {
                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: space-around;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 50px;
 
-                >* {
-                    margin: 40px 0px;
+                * {
+                    transition: 0.2s;
                 }
 
-                hr.small {
-                    border-width: 0px;
-                    height: 3px;
-                    width: 70px;
-                    margin: 0;
-                    margin-bottom: 30px;
-                    background-color: $Dark-pink;
-                }
-
-                h1 {
-                    margin: 0px;
-                    font-size: 92px;
-                    font-weight: 900;
-                    width: 70%;
-                }
-
-                a {
-                    border: 2px solid $Dark-pink;
+                a.item {
+                    flex: 1;
+                    min-width: 200px;
+                    background-color: #222222;
                     color: white;
-                    padding: 15px 30px;
-                    position: relative;
-                    z-index: 0;
-                    font-weight: bold;
+                    padding: 40px 20px;
+                    margin: 20px;
 
-                    .fill {
-                        position: absolute;
-                        background-color: $Dark-pink;
-                        z-index: -1;
-                        width: 0%;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        transition-duration: 0.5s;
-                        transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
+                    hr {
+                        color: $Dark-pink;
                     }
 
+                    i.fas {
+                        color: $Dark-pink;
+                        font-size: 44px;
+                    }
+
+                    p.header {
+                        font-size: 18px;
+                        font-weight: bolder;
+                    }
+
+                    p.content {
+                        line-height: 24px;
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        background-color: $Dark-pink;
+
+                        i.fas,
+                        hr {
+                            color: white;
+                        }
+                    }
                 }
 
-                a:hover .fill {
-                    width: 100%;
+                a.selected {
+                    background-color: $Dark-pink;
+
+                    i.fas,
+                    hr {
+                        color: white;
+                    }
                 }
             }
         }
