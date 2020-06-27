@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+$Trade-gothic: 'Lato', sans-serif;
+$Dark-pink: #E9204F;
+
+body {
+    font-family: $Trade-gothic;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    div.container {
+        max-width: 1900px;
+        margin: auto;
+
+        header {
+            background-color: black;
+            display: flex;
+            height: 170px;
+
+            div.logo {
+                display: flex;
+                align-items: center;
+                margin: 40px;
+
+                img {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 170px;
+                }
+            }
+
+            nav {
+                font-weight: bold;
+                width: 100%;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .selected-line {
+                        background-color: $Dark-pink !important;
+                        width: 70% !important;
+                    }
+
+                    .line {
+                        width: 0;
+                        margin-top: 1px;
+                        height: 2px;
+                        transition: 0.5s;
+                        background-color: white;
+                    }
+                    
+                    li:hover .line {
+                        background-color: $Dark-pink;
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
