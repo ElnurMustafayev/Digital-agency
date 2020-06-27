@@ -5,16 +5,16 @@ body {
 
 body a {
   text-decoration: none;
-  color: white;
 }
 
 body div.container {
+  background-color: black;
   max-width: 1900px;
   margin: auto;
 }
 
 body div.container header {
-  background-color: black;
+  margin: auto 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,5 +78,79 @@ body div.container header nav ul .line {
 body div.container header nav ul li:hover .line {
   background-color: #E9204F;
   width: 70%;
+}
+
+body div.container header nav ul a {
+  color: white;
+}
+
+body div.container div.header-content {
+  background-color: white;
+}
+
+body div.container div.header-content div.getting-started {
+  padding: 50px;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body div.container div.header-content div.getting-started > * {
+  margin: 40px 0px;
+}
+
+body div.container div.header-content div.getting-started hr.small {
+  border-width: 0px;
+  height: 3px;
+  width: 70px;
+  margin: 0;
+  margin-bottom: 30px;
+  background-color: #E9204F;
+}
+
+body div.container div.header-content div.getting-started h1 {
+  margin: 0px;
+  font-size: 92px;
+  font-weight: 900;
+  width: 70%;
+}
+
+body div.container div.header-content div.getting-started a {
+  border: 2px solid #E9204F;
+  color: white;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 0;
+  font-weight: bold;
+}
+
+body div.container div.header-content div.getting-started a .fill {
+  position: absolute;
+  background-color: #E9204F;
+  z-index: -1;
+  width: 0%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+          transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+}
+
+body div.container div.header-content div.getting-started a:hover .fill {
+  width: 100%;
 }
 /*# sourceMappingURL=Style.css.map */
