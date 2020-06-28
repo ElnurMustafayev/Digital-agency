@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+
+// FONT
+$Trade-gothic: 'Lato',
+sans-serif;
+
+// COLORS
+$Dark-pink: #E9204F;
+$Black: #101010;
+$Gray: #F3F3F3;
+
+// BUTTON WITH FILL
+a.btn-address {
+    border: 2px solid $Dark-pink;
+    color: white;
+    padding: 15px 30px;
+    position: relative;
+    z-index: 0;
+    font-weight: 900;
+
+    .fill {
+        position: absolute;
+        background-color: $Dark-pink;
+        z-index: -1;
+        width: 0%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
+    }
+
+    &:hover .fill {
+        width: 100%;
+    }
+}
+
+// SECTION WITH HEADER
+section div.header {
+
+    hr.small {
+        border-width: 0px;
+        height: 2px;
+        width: 50px;
+        margin-left: 0;
+        background-color: $Dark-pink;
+    }
+
+    h2.services {
+        color: $Black;
+        font-size: 48px;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    p.content {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        color: $Dark-pink;
+        margin: 0;
+    }
+}
+
+// VERTICAL HR
+hr.vertical {
+    border-width: 0px;
+    height: 60px;
+    margin: 70px auto;
+    width: 2px;
+    background-color: $Dark-pink;
+}

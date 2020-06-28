@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
-// fonts
-$Trade-gothic: 'Lato',
-sans-serif;
-
-// colors
-$Dark-pink: #E9204F;
-$Black: #101010;
-$Gray: #F3F3F3;
+@import 'Global.scss';
 
 html {
     scroll-behavior: smooth;
@@ -120,32 +112,6 @@ html {
                         font-weight: 900;
                         width: 70%;
                     }
-
-                    a {
-                        border: 2px solid $Dark-pink;
-                        color: white;
-                        padding: 15px 30px;
-                        position: relative;
-                        z-index: 0;
-                        font-weight: bold;
-
-                        .fill {
-                            position: absolute;
-                            background-color: $Dark-pink;
-                            z-index: -1;
-                            width: 0%;
-                            left: 0;
-                            right: 0;
-                            top: 0;
-                            bottom: 0;
-                            transition-duration: 0.5s;
-                            transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
-                        }
-
-                        &:hover .fill {
-                            width: 100%;
-                        }
-                    }
                 }
             }
 
@@ -209,51 +175,26 @@ html {
                     hr {
                         color: white;
                     }
-                }
-            }
 
-            section.designed a.selected p.content::after {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 60px;
-                background-color: #ac0028;
+                    p.content::after {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 60px;
+                        background-color: #ac0028;
+                    }
+                }
             }
 
             // S E R V I C E S
             section.services {
                 padding: 80px;
+                padding-top: 0;
                 background-color: white;
                 color: black;
-
-                div.header {
-
-                    hr.small {
-                        border-width: 0px;
-                        height: 2px;
-                        width: 50px;
-                        margin-left: 0;
-                        background-color: $Dark-pink;
-                    }
-
-                    h2.services {
-                        color: $Black;
-                        font-size: 48px;
-                        font-weight: 900;
-                        margin: 0;
-                    }
-
-                    p.content {
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        letter-spacing: -0.5px;
-                        color: $Dark-pink;
-                        margin: 0;
-                    }
-                }
 
                 div.services-grid {
                     margin-top: 70px;
@@ -292,6 +233,98 @@ html {
                         background-color: $Dark-pink;
                         color: white;
                         padding: 0px 20px 0px 40px;
+                    }
+                }
+            }
+
+            // W O R K S
+            section.works {
+
+                div.header {
+                    padding: 0px 80px;
+                    display: flex;
+                    align-items: center;
+
+                    div.words {
+                        flex: 1;
+                    }
+
+                    a.btn-address {
+                        color: black;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+                div.items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 50px 0px;
+
+                    a.item {
+                        position: relative;
+                        display: inline-block;
+                        height: 400px;
+                        width: 30%;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            display: inline-block;
+                            object-fit: cover;
+                            filter: grayscale(100%);
+                            transition-duration: 0.2s;
+                        }
+
+                        &:hover {
+                            
+                            img {
+                                filter: grayscale(0%);
+                                transform: scale(1.2);
+                            }
+                        }
+
+                        div.content {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #0303034d;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            visibility: hidden;
+
+                            h3.header {
+                                font-weight: 900;
+                                font-size: 24px;
+                            }
+
+                            * {
+                                color: white;
+                                margin: 0;
+                                margin-right: 20px;
+                                opacity: 0;
+                                transition: all 0.5s;
+                            }
+                        }
+
+                        &:hover {
+                            div.content {
+                                visibility: visible;
+
+                                * {
+                                    opacity: 1;
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
                     }
                 }
             }

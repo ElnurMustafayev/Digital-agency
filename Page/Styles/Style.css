@@ -1,4 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+a.btn-address {
+  border: 2px solid #E9204F;
+  color: white;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 0;
+  font-weight: 900;
+}
+
+a.btn-address .fill {
+  position: absolute;
+  background-color: #E9204F;
+  z-index: -1;
+  width: 0%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+          transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+}
+
+a.btn-address:hover .fill {
+  width: 100%;
+}
+
+section div.header hr.small {
+  border-width: 0px;
+  height: 2px;
+  width: 50px;
+  margin-left: 0;
+  background-color: #E9204F;
+}
+
+section div.header h2.services {
+  color: #101010;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+section div.header p.content {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #E9204F;
+  margin: 0;
+}
+
+hr.vertical {
+  border-width: 0px;
+  height: 60px;
+  margin: 70px auto;
+  width: 2px;
+  background-color: #E9204F;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -144,34 +203,6 @@ html body div.container section.header-content div.getting-started h1 {
   width: 70%;
 }
 
-html body div.container section.header-content div.getting-started a {
-  border: 2px solid #E9204F;
-  color: white;
-  padding: 15px 30px;
-  position: relative;
-  z-index: 0;
-  font-weight: bold;
-}
-
-html body div.container section.header-content div.getting-started a .fill {
-  position: absolute;
-  background-color: #E9204F;
-  z-index: -1;
-  width: 0%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
-          transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
-}
-
-html body div.container section.header-content div.getting-started a:hover .fill {
-  width: 100%;
-}
-
 html body div.container section.items {
   background-color: black;
   position: relative;
@@ -240,7 +271,7 @@ html body div.container section.items a.selected hr {
   color: white;
 }
 
-html body div.container section.designed a.selected p.content::after {
+html body div.container section.items a.selected p.content::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -253,31 +284,9 @@ html body div.container section.designed a.selected p.content::after {
 
 html body div.container section.services {
   padding: 80px;
+  padding-top: 0;
   background-color: white;
   color: black;
-}
-
-html body div.container section.services div.header hr.small {
-  border-width: 0px;
-  height: 2px;
-  width: 50px;
-  margin-left: 0;
-  background-color: #E9204F;
-}
-
-html body div.container section.services div.header h2.services {
-  color: #101010;
-  font-size: 48px;
-  font-weight: 900;
-  margin: 0;
-}
-
-html body div.container section.services div.header p.content {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: -0.5px;
-  color: #E9204F;
-  margin: 0;
 }
 
 html body div.container section.services div.services-grid {
@@ -326,5 +335,114 @@ html body div.container section.services div.services-grid a.selected {
   background-color: #E9204F;
   color: white;
   padding: 0px 20px 0px 40px;
+}
+
+html body div.container section.works div.header {
+  padding: 0px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body div.container section.works div.header div.words {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+html body div.container section.works div.header a.btn-address {
+  color: black;
+}
+
+html body div.container section.works div.header a.btn-address:hover {
+  color: white;
+}
+
+html body div.container section.works div.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0px;
+}
+
+html body div.container section.works div.items a.item {
+  position: relative;
+  display: inline-block;
+  height: 400px;
+  width: 30%;
+  overflow: hidden;
+}
+
+html body div.container section.works div.items a.item img {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+html body div.container section.works div.items a.item:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+html body div.container section.works div.items a.item div.content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0303034d;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+html body div.container section.works div.items a.item div.content h3.header {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+html body div.container section.works div.items a.item div.content * {
+  color: white;
+  margin: 0;
+  margin-right: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+html body div.container section.works div.items a.item:hover div.content {
+  visibility: visible;
+}
+
+html body div.container section.works div.items a.item:hover div.content * {
+  opacity: 1;
+  margin-right: 0px;
 }
 /*# sourceMappingURL=Style.css.map */

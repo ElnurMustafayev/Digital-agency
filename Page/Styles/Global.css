@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+a.btn-address {
+  border: 2px solid #E9204F;
+  color: white;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 0;
+  font-weight: 900;
+}
+
+a.btn-address .fill {
+  position: absolute;
+  background-color: #E9204F;
+  z-index: -1;
+  width: 0%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+          transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
+}
+
+a.btn-address:hover .fill {
+  width: 100%;
+}
+
+section div.header hr.small {
+  border-width: 0px;
+  height: 2px;
+  width: 50px;
+  margin-left: 0;
+  background-color: #E9204F;
+}
+
+section div.header h2.services {
+  color: #101010;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+section div.header p.content {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #E9204F;
+  margin: 0;
+}
+
+hr.vertical {
+  border-width: 0px;
+  height: 60px;
+  margin: 70px auto;
+  width: 2px;
+  background-color: #E9204F;
+}
+/*# sourceMappingURL=Global.css.map */
