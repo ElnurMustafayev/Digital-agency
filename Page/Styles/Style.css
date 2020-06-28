@@ -7,18 +7,32 @@ html body {
   font-family: "Lato", sans-serif;
 }
 
+html body *:focus {
+  outline: none;
+}
+
+html body *::-moz-selection {
+  background-color: #86868642;
+  color: black;
+}
+
+html body *::selection {
+  background-color: #86868642;
+  color: black;
+}
+
 html body a {
   text-decoration: none;
 }
 
 html body div.container {
-  background-color: black;
   max-width: 1900px;
   margin: auto;
 }
 
 html body div.container header {
-  margin: auto 50px;
+  background-color: black;
+  padding: 0px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,11 +102,11 @@ html body div.container header nav ul a {
   color: white;
 }
 
-html body div.container div.header-content {
+html body div.container section.header-content {
   background-color: white;
 }
 
-html body div.container div.header-content div.getting-started {
+html body div.container section.header-content div.getting-started {
   padding: 50px;
   background-color: black;
   color: white;
@@ -110,11 +124,11 @@ html body div.container div.header-content div.getting-started {
       justify-content: space-around;
 }
 
-html body div.container div.header-content div.getting-started > * {
+html body div.container section.header-content div.getting-started > * {
   margin: 40px 0px;
 }
 
-html body div.container div.header-content div.getting-started hr.small {
+html body div.container section.header-content div.getting-started hr.small {
   border-width: 0px;
   height: 3px;
   width: 70px;
@@ -123,14 +137,14 @@ html body div.container div.header-content div.getting-started hr.small {
   background-color: #E9204F;
 }
 
-html body div.container div.header-content div.getting-started h1 {
+html body div.container section.header-content div.getting-started h1 {
   margin: 0px;
   font-size: 92px;
   font-weight: 900;
   width: 70%;
 }
 
-html body div.container div.header-content div.getting-started a {
+html body div.container section.header-content div.getting-started a {
   border: 2px solid #E9204F;
   color: white;
   padding: 15px 30px;
@@ -139,7 +153,7 @@ html body div.container div.header-content div.getting-started a {
   font-weight: bold;
 }
 
-html body div.container div.header-content div.getting-started a .fill {
+html body div.container section.header-content div.getting-started a .fill {
   position: absolute;
   background-color: #E9204F;
   z-index: -1;
@@ -154,28 +168,29 @@ html body div.container div.header-content div.getting-started a .fill {
           transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
 }
 
-html body div.container div.header-content div.getting-started a:hover .fill {
+html body div.container section.header-content div.getting-started a:hover .fill {
   width: 100%;
 }
 
-html body div.container div.items {
+html body div.container section.items {
+  background-color: black;
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 50px;
+  padding: 50px;
+  padding-bottom: 0px;
 }
 
-html body div.container div.items * {
+html body div.container section.items * {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-html body div.container div.items a.item {
+html body div.container section.items a.item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -186,40 +201,130 @@ html body div.container div.items a.item {
   margin: 20px;
 }
 
-html body div.container div.items a.item hr {
+html body div.container section.items a.item hr {
   color: #E9204F;
+  width: 20%;
+  margin-left: 0;
 }
 
-html body div.container div.items a.item i.fas {
+html body div.container section.items a.item i.fas {
   color: #E9204F;
   font-size: 44px;
 }
 
-html body div.container div.items a.item p.header {
+html body div.container section.items a.item p.header {
   font-size: 18px;
   font-weight: bolder;
 }
 
-html body div.container div.items a.item p.content {
+html body div.container section.items a.item p.content {
   line-height: 24px;
   margin: 0;
 }
 
-html body div.container div.items a.item:hover {
+html body div.container section.items a.item:hover {
   background-color: #E9204F;
 }
 
-html body div.container div.items a.item:hover i.fas,
-html body div.container div.items a.item:hover hr {
+html body div.container section.items a.item:hover i.fas,
+html body div.container section.items a.item:hover hr {
   color: white;
 }
 
-html body div.container div.items a.selected {
+html body div.container section.items a.selected {
   background-color: #E9204F;
 }
 
-html body div.container div.items a.selected i.fas,
-html body div.container div.items a.selected hr {
+html body div.container section.items a.selected i.fas,
+html body div.container section.items a.selected hr {
   color: white;
+}
+
+html body div.container section.designed a.selected p.content::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ac0028;
+}
+
+html body div.container section.services {
+  padding: 80px;
+  background-color: white;
+  color: black;
+}
+
+html body div.container section.services div.header hr.small {
+  border-width: 0px;
+  height: 2px;
+  width: 50px;
+  margin-left: 0;
+  background-color: #E9204F;
+}
+
+html body div.container section.services div.header h2.services {
+  color: #101010;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+html body div.container section.services div.header p.content {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #E9204F;
+  margin: 0;
+}
+
+html body div.container section.services div.services-grid {
+  margin-top: 70px;
+  height: 370px;
+  display: -ms-grid;
+  display: grid;
+  grid: repeat(3, 1fr)/repeat(3, 1fr);
+  gap: 30px;
+}
+
+html body div.container section.services div.services-grid a.item {
+  color: #101010;
+  background-color: #F3F3F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+html body div.container section.services div.services-grid a.item h3.service {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+html body div.container section.services div.services-grid a.item i.fas {
+  font-size: 28px;
+}
+
+html body div.container section.services div.services-grid a.item:hover {
+  background-color: #E9204F;
+  color: white;
+  padding: 0px 20px 0px 40px;
+}
+
+html body div.container section.services div.services-grid a.selected {
+  background-color: #E9204F;
+  color: white;
+  padding: 0px 20px 0px 40px;
 }
 /*# sourceMappingURL=Style.css.map */

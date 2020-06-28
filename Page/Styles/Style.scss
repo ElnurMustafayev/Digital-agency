@@ -1,25 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+// fonts
 $Trade-gothic: 'Lato',
 sans-serif;
+
+// colors
 $Dark-pink: #E9204F;
+$Black: #101010;
+$Gray: #F3F3F3;
 
 html {
     scroll-behavior: smooth;
+
     body {
         font-family: $Trade-gothic;
+
+        *:focus {
+            outline: none;
+        }
+
+        *::selection {
+            background-color: #86868642;
+            color: black
+        }
 
         a {
             text-decoration: none;
         }
 
         div.container {
-            background-color: black;
             max-width: 1900px;
             margin: auto;
 
             // H E A D E R
             header {
-                margin: auto 50px;
+                background-color: black;
+                padding: 0px 50px;
                 display: flex;
                 height: 170px;
 
@@ -73,8 +88,8 @@ html {
                 }
             }
 
-            // M A I N
-            div.header-content {
+            // G E T T I N G    S T A R T E D
+            section.header-content {
                 background-color: white;
 
                 div.getting-started {
@@ -134,11 +149,15 @@ html {
                 }
             }
 
-            div.items {
+            // I T E M S
+            section.items {
+                background-color: black;
+                position: relative;
+                z-index: 1;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                margin: 50px;
+                padding: 50px;
+                padding-bottom: 0px;
 
                 * {
                     transition: 0.2s;
@@ -154,6 +173,8 @@ html {
 
                     hr {
                         color: $Dark-pink;
+                        width: 20%;
+                        margin-left: 0;
                     }
 
                     i.fas {
@@ -187,6 +208,90 @@ html {
                     i.fas,
                     hr {
                         color: white;
+                    }
+                }
+            }
+
+            section.designed a.selected p.content::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                background-color: #ac0028;
+            }
+
+            // S E R V I C E S
+            section.services {
+                padding: 80px;
+                background-color: white;
+                color: black;
+
+                div.header {
+
+                    hr.small {
+                        border-width: 0px;
+                        height: 2px;
+                        width: 50px;
+                        margin-left: 0;
+                        background-color: $Dark-pink;
+                    }
+
+                    h2.services {
+                        color: $Black;
+                        font-size: 48px;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+
+                    p.content {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: -0.5px;
+                        color: $Dark-pink;
+                        margin: 0;
+                    }
+                }
+
+                div.services-grid {
+                    margin-top: 70px;
+                    height: 370px;
+                    display: grid;
+                    grid: repeat(3, 1fr) / repeat(3, 1fr);
+                    gap: 30px;
+
+                    a.item {
+                        color: $Black;
+                        background-color: $Gray;
+                        display: flex;
+                        align-items: center;
+                        padding: 0px 20px;
+                        transition-duration: 0.3s;
+
+                        h3.service {
+                            font-size: 20px;
+                            font-weight: 900;
+                            margin: 0;
+                            flex: 1;
+                        }
+
+                        i.fas {
+                            font-size: 28px;
+                        }
+
+                        &:hover {
+                            background-color: $Dark-pink;
+                            color: white;
+                            padding: 0px 20px 0px 40px;
+                        }
+                    }
+
+                    a.selected {
+                        background-color: $Dark-pink;
+                        color: white;
+                        padding: 0px 20px 0px 40px;
                     }
                 }
             }
