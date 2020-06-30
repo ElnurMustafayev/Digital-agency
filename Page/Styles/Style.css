@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3,
+h4, h5, h6 {
   font-weight: 900;
 }
 
@@ -33,7 +29,7 @@ a.btn-address::after {
           transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
 }
 
-a.btn-address:hover::after {
+a.btn-address:hover::after, a.btn-address:active::after, a.btn-address:focus::after {
   width: 100%;
 }
 
@@ -82,16 +78,14 @@ html body {
   font-family: "Lato", sans-serif;
 }
 
-html body *:focus {
+html body *::-moz-selection, html body *:focus {
   outline: none;
-}
-
-html body *::-moz-selection {
   background-color: #86868642;
   color: black;
 }
 
-html body *::selection {
+html body *::selection, html body *:focus {
+  outline: none;
   background-color: #86868642;
   color: black;
 }
@@ -107,7 +101,7 @@ html body div.container {
 
 html body div.container div.header-bg {
   background-color: black;
-  background-image: url("/Images/header_bg.jpg");
+  background-image: url("../Images/header_bg.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: 800px;
@@ -183,7 +177,7 @@ html body div.container header nav ul a.selected::after {
   width: 70%;
 }
 
-html body div.container header nav ul li:hover a::after {
+html body div.container header nav ul li:hover a::after, html body div.container header nav ul li:active a::after, html body div.container header nav ul li:focus a::after {
   background-color: #E9204F;
   width: 70%;
 }
@@ -274,12 +268,14 @@ html body div.container section.items a.item p.content {
   margin: 0;
 }
 
-html body div.container section.items a.item:hover {
+html body div.container section.items a.item:hover, html body div.container section.items a.item:active, html body div.container section.items a.item:focus {
   background-color: #E9204F;
 }
 
 html body div.container section.items a.item:hover i.fas,
-html body div.container section.items a.item:hover hr {
+html body div.container section.items a.item:hover hr, html body div.container section.items a.item:active i.fas,
+html body div.container section.items a.item:active hr, html body div.container section.items a.item:focus i.fas,
+html body div.container section.items a.item:focus hr {
   color: white;
 }
 
@@ -346,7 +342,7 @@ html body div.container section.services div.services-grid a.item i.fas {
   font-size: 28px;
 }
 
-html body div.container section.services div.services-grid a.item:hover {
+html body div.container section.services div.services-grid a.item:hover, html body div.container section.services div.services-grid a.item:active, html body div.container section.services div.services-grid a.item:focus {
   background-color: #E9204F;
   color: white;
   padding: 0px 20px 0px 40px;
@@ -378,7 +374,7 @@ html body div.container section.works div.header a.btn-address {
   color: black;
 }
 
-html body div.container section.works div.header a.btn-address:hover {
+html body div.container section.works div.header a.btn-address:hover, html body div.container section.works div.header a.btn-address:active, html body div.container section.works div.header a.btn-address:focus {
   color: white;
 }
 
@@ -414,7 +410,7 @@ html body div.container section.works div.items a.item img {
           transition-duration: 0.2s;
 }
 
-html body div.container section.works div.items a.item:hover img {
+html body div.container section.works div.items a.item:hover img, html body div.container section.works div.items a.item:active img, html body div.container section.works div.items a.item:focus img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transform: scale(1.2);
@@ -458,11 +454,11 @@ html body div.container section.works div.items a.item div.content * {
   transition: all 0.5s;
 }
 
-html body div.container section.works div.items a.item:hover div.content {
+html body div.container section.works div.items a.item:hover div.content, html body div.container section.works div.items a.item:active div.content, html body div.container section.works div.items a.item:focus div.content {
   visibility: visible;
 }
 
-html body div.container section.works div.items a.item:hover div.content * {
+html body div.container section.works div.items a.item:hover div.content *, html body div.container section.works div.items a.item:active div.content *, html body div.container section.works div.items a.item:focus div.content * {
   opacity: 1;
   margin-right: 0px;
 }
@@ -511,12 +507,12 @@ html body div.container section.about div.items .item {
   overflow: hidden;
 }
 
-html body div.container section.about div.items .item:hover img {
+html body div.container section.about div.items .item:hover img, html body div.container section.about div.items .item:active img, html body div.container section.about div.items .item:focus img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
 }
 
-html body div.container section.about div.items .item:hover div.content {
+html body div.container section.about div.items .item:hover div.content, html body div.container section.about div.items .item:active div.content, html body div.container section.about div.items .item:focus div.content {
   opacity: 1;
 }
 

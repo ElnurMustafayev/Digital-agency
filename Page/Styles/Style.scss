@@ -6,11 +6,8 @@ html {
     body {
         font-family: $Trade-gothic;
 
-        *:focus {
+        *::selection, *:focus {
             outline: none;
-        }
-
-        *::selection {
             background-color: #86868642;
             color: black
         }
@@ -26,7 +23,7 @@ html {
             // S T A R T   B A C K G R O U N D
             div.header-bg {
                 background-color: black;
-                background-image: url("/Images/header_bg.jpg");
+                background-image: url("../Images/header_bg.jpg");
                 background-position: right;
                 background-repeat: no-repeat;
                 background-size: 800px;
@@ -86,7 +83,7 @@ html {
                             }
                         }
 
-                        li:hover {
+                        li:hover, li:active, li:focus {
                             a::after {
                                 background-color: $Dark-pink;
                                 width: 70%;
@@ -171,7 +168,7 @@ html {
                         margin: 0;
                     }
 
-                    &:hover {
+                    &:hover, &:active, &:focus {
                         background-color: $Dark-pink;
 
                         i.fas,
@@ -235,7 +232,7 @@ html {
                             font-size: 28px;
                         }
 
-                        &:hover {
+                        &:hover, &:active, &:focus {
                             background-color: $Dark-pink;
                             color: white;
                             padding: 0px 20px 0px 40px;
@@ -265,7 +262,7 @@ html {
                     a.btn-address {
                         color: black;
 
-                        &:hover {
+                        &:hover, &:active, &:focus {
                             color: white;
                         }
                     }
@@ -293,7 +290,7 @@ html {
                             transition-duration: 0.2s;
                         }
 
-                        &:hover {
+                        &:hover, &:active, &:focus {
 
                             img {
                                 filter: grayscale(0%);
@@ -328,7 +325,7 @@ html {
                             }
                         }
 
-                        &:hover {
+                        &:hover, &:active, &:focus {
                             div.content {
                                 visibility: visible;
 
@@ -376,7 +373,7 @@ html {
                         position: relative;
                         overflow: hidden;
 
-                        &:hover {
+                        &:hover, &:active, &:focus {
                             img {
                                 filter: grayscale(0%);
                             }

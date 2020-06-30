@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
 
 // FONT
-$Trade-gothic: 'Lato',
-sans-serif;
+$Trade-gothic: 'Lato', sans-serif;
 
 // COLORS
 $Dark-pink: #E9204F;
@@ -10,12 +9,9 @@ $Black: #101010;
 $Gray: #F3F3F3;
 $Light-Gray: #747474;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+// HEADERS GLOBAL
+h1, h2, h3,
+h4, h5, h6 {
     font-weight: 900;
 }
 
@@ -42,7 +38,7 @@ a.btn-address {
         transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
     }
 
-    &:hover {
+    &:hover, &:active, &:focus {
         &::after {
             width: 100%;
         }
