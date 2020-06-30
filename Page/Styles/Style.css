@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
 a.btn-address {
   border: 2px solid #E9204F;
   color: white;
@@ -8,11 +17,12 @@ a.btn-address {
   font-weight: 900;
 }
 
-a.btn-address .fill {
-  position: absolute;
-  background-color: #E9204F;
-  z-index: -1;
+a.btn-address::after {
+  content: '';
   width: 0%;
+  background-color: #E9204F;
+  position: absolute;
+  z-index: -1;
   left: 0;
   right: 0;
   top: 0;
@@ -23,11 +33,17 @@ a.btn-address .fill {
           transition-timing-function: cubic-bezier(0.13, 1, 0.92, 1);
 }
 
-a.btn-address:hover .fill {
+a.btn-address:hover::after {
   width: 100%;
 }
 
-section div.header hr.small {
+section > .header .words {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+section > .header hr.small {
   border-width: 0px;
   height: 2px;
   width: 50px;
@@ -35,14 +51,14 @@ section div.header hr.small {
   background-color: #E9204F;
 }
 
-section div.header h2.services {
+section > .header h2.services {
   color: #101010;
   font-size: 48px;
   font-weight: 900;
   margin: 0;
 }
 
-section div.header p.content {
+section > .header p.content {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: -0.5px;
@@ -89,8 +105,15 @@ html body div.container {
   margin: auto;
 }
 
-html body div.container header {
+html body div.container div.header-bg {
   background-color: black;
+  background-image: url("/Images/header_bg.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 800px;
+}
+
+html body div.container header {
   padding: 0px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,36 +161,35 @@ html body div.container header nav ul {
       justify-content: space-around;
 }
 
-html body div.container header nav ul .selected-line {
-  background-color: #E9204F !important;
-  width: 70% !important;
+html body div.container header nav ul a {
+  color: white;
+  position: relative;
 }
 
-html body div.container header nav ul .line {
+html body div.container header nav ul a::after {
+  content: '';
+  position: absolute;
   width: 0;
-  margin-top: 1px;
   height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: white;
 }
 
-html body div.container header nav ul li:hover .line {
+html body div.container header nav ul a.selected::after {
   background-color: #E9204F;
   width: 70%;
 }
 
-html body div.container header nav ul a {
-  color: white;
-}
-
-html body div.container section.header-content {
-  background-color: white;
+html body div.container header nav ul li:hover a::after {
+  background-color: #E9204F;
+  width: 70%;
 }
 
 html body div.container section.header-content div.getting-started {
   padding: 50px;
-  background-color: black;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,7 +226,6 @@ html body div.container section.header-content div.getting-started h1 {
 }
 
 html body div.container section.items {
-  background-color: black;
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -444,5 +465,106 @@ html body div.container section.works div.items a.item:hover div.content {
 html body div.container section.works div.items a.item:hover div.content * {
   opacity: 1;
   margin-right: 0px;
+}
+
+html body div.container section.about .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 80px;
+}
+
+html body div.container section.about .header p.about-content {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  color: #747474;
+}
+
+html body div.container section.about div.items {
+  height: 600px;
+  display: -ms-grid;
+  display: grid;
+  grid: repeat(2, 1fr)/repeat(3, 1fr);
+  margin: 50px 80px;
+  gap: 30px;
+}
+
+html body div.container section.about div.items .col-2_row-2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+html body div.container section.about div.items .item {
+  position: relative;
+  overflow: hidden;
+}
+
+html body div.container section.about div.items .item:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+html body div.container section.about div.items .item:hover div.content {
+  opacity: 1;
+}
+
+html body div.container section.about div.items .item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+html body div.container section.about div.items .item div.content {
+  position: absolute;
+  color: white;
+  left: 0;
+  bottom: 0;
+  opacity: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 25px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+html body div.container section.about div.items .item div.content * {
+  margin: 5px;
+}
+
+html body div.container section.about div.descriptions {
+  display: -ms-grid;
+  display: grid;
+  grid: 1fr/repeat(3, 1fr);
+  gap: 50px;
+  margin: 0px 80px;
+}
+
+html body div.container section.about div.descriptions .item p {
+  color: #747474;
 }
 /*# sourceMappingURL=Style.css.map */

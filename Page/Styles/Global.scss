@@ -8,6 +8,16 @@ sans-serif;
 $Dark-pink: #E9204F;
 $Black: #101010;
 $Gray: #F3F3F3;
+$Light-Gray: #747474;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+}
 
 // BUTTON WITH FILL
 a.btn-address {
@@ -18,11 +28,12 @@ a.btn-address {
     z-index: 0;
     font-weight: 900;
 
-    .fill {
-        position: absolute;
-        background-color: $Dark-pink;
-        z-index: -1;
+    &::after {
+        content: '';
         width: 0%;
+        background-color: $Dark-pink;
+        position: absolute;
+        z-index: -1;
         left: 0;
         right: 0;
         top: 0;
@@ -31,13 +42,19 @@ a.btn-address {
         transition-timing-function: cubic-bezier(0.13, 1, 0.920, 1);
     }
 
-    &:hover .fill {
-        width: 100%;
+    &:hover {
+        &::after {
+            width: 100%;
+        }
     }
 }
 
 // SECTION WITH HEADER
-section div.header {
+section>.header {
+
+    .words {
+        flex: 1;
+    }
 
     hr.small {
         border-width: 0px;

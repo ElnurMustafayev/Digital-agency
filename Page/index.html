@@ -14,18 +14,17 @@
     <!-- font icons -->
     <script
       src="https://kit.fontawesome.com/d4d91b1b46.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 
     <!-- my styles -->
     <link rel="stylesheet" href="Styles/Style.css" />
 
-    <!-- jquery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
+
       <!-- h e a d e r -->
+      <div class="header-bg">
       <header>
         <div class="logo">
           <a href="#">
@@ -38,36 +37,28 @@
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
-              <div class="line selected-line"></div>
+              <a class="selected" href="#">Home</a>
             </li>
             <li>
               <a href="#">Services</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">Works</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">About</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">Clients</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">Blog</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">Contact</a>
-              <div class="line"></div>
             </li>
             <li>
               <a href="#">Go</a>
-              <div class="line"></div>
             </li>
           </ul>
         </nav>
@@ -78,17 +69,16 @@
         <div class="getting-started">
           <hr class="small" />
           <h1>We're a digital agency.</h1>
-          <a class="btn-address" href="#">
-            <div class="fill"></div>
-            Getting Started</a
-          >
+          <a class="btn-address" href="#gs" id="gs">
+            Getting Started
+          </a>
         </div>
       </section>
 
       <!-- i t e m s -->
       <section class="items designed">
         <!-- 1 ITEM -->
-        <a href="#" class="selected item">
+        <a href="#gs1" id="gs1" class="selected item">
           <i class="fas fa-tasks"></i>
           <p class="header">Future Vision.</p>
           <hr />
@@ -102,7 +92,7 @@
         </a>
 
         <!-- 2 ITEM -->
-        <a href="#" class="item">
+        <a href="#gs2" id="gs2" class="item">
           <i class="fas fa-rocket"></i>
           <p class="header">Product Design.</p>
           <hr />
@@ -116,7 +106,7 @@
         </a>
 
         <!-- 3 ITEM -->
-        <a href="#" class="item">
+        <a href="#gs3" id="gs3" class="item">
           <i class="fas fa-chart-pie"></i>
           <p class="header">Inovative Solutions.</p>
           <hr />
@@ -129,6 +119,7 @@
           </p>
         </a>
       </section>
+      </div>
 
       <hr class="vertical" />
 
@@ -142,39 +133,39 @@
 
         <!-- i t e m s -->
         <div class="services-grid">
-          <a href="#" class="item selected">
+          <a href="#11" id="11" class="item selected">
             <h3 class="service">Digital Strategy</h3>
             <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="#" class="item"
+          <a href="#12" id="12" class="item"
             ><h3 class="service">UX Design</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#13" id="13" class="item"
             ><h3 class="service">Product Design</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#21" id="21" class="item"
             ><h3 class="service">Content Strategy</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#22" id="22" class="item"
             ><h3 class="service">Design & Concept</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#23" id="23" class="item"
             ><h3 class="service">Social Media</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#31" id="31" class="item"
             ><h3 class="service">Media Planing</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#32" id="32" class="item"
             ><h3 class="service">Brand Identity</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
-          <a href="#" class="item"
+          <a href="#33" id="33" class="item"
             ><h3 class="service">SEO Optimization</h3>
             <i class="fas fa-arrow-right"></i
           ></a>
@@ -189,31 +180,30 @@
           <div class="words">
             <hr class="small" />
             <h2 class="services">Works.</h2>
-            <p class="content">Things we'he made</p>
+            <p class="content">Things we've made</p>
           </div>
-          <a class="btn-address" href="#">
-            <div class="fill"></div>
+          <a class="btn-address" href="#v" id="v">
             View All
           </a>
         </div>
 
         <!-- items -->
         <div class="items">
-          <a href="#" class="item">
+          <a href="#1" id="1" class="item">
             <img src="Images/work2.jpg" alt="work photo"/>
             <div class="content">
               <h3 class="header">Woody</h6>
               <p class="content">Website / Developement</p>
             </div>
           </a>
-          <a href="#" class="item">
+          <a href="#2" id="2" class="item">
             <img src="Images/work4.jpg" alt="work photo"/>
             <div class="content">
               <h3 class="header">Interior Design</h6>
               <p class="content">Archticture / Design</p>
             </div>
           </a>
-          <a href="#" class="item">
+          <a href="#3" id="3" class="item">
             <img src="Images/work5.jpg" alt="work photo"/>
             <div class="content">
               <h3 class="header">Electrica</h6>
@@ -225,7 +215,89 @@
 
       <hr class="vertical" />
       
+      <!-- a b o u t -->
+      <section class="about">
+
+        <div class="header">
+          <div class="words">
+            <hr class="small"/>
+            <h2 class="services">About.</h2>
+            <p class="content">We're more than a digital agency</p>
+          </div>
+
+          <p class="about-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolores laboriosam 
+            doloremque molestias consequuntur autem quasi in aspernatur corporis magnam, atque dolor 
+            voluptas. Non necessitatibus id recusandae
+          </p>
+        </div>
+
+        <!-- items -->
+        <div class="items">
+
+          <!-- item 1 -->
+          <a href="#" class="item col-2_row-2">
+            <img src="Images/about1.jpg" alt="Teamwork">
+            <div class="content">
+                <h3>Teamwork</h3>
+                <p>Committed and creative</p>
+            </div>
+          </a>
+
+          <!-- item 2 -->
+          <a href="#" class="item">
+            <img src="Images/about2.jpg" alt="Philosophy">
+            <div class="content">
+              <h3>Philosophy</h3>
+              <p>Trust pays off</p>
+          </div>
+          </a>
+
+          <!-- item 3 -->
+          <a href="#" class="item">
+            <img src="Images/about3.jpg" alt="Office">
+            <div class="content">
+              <h3>Office</h3>
+              <p>Berlin, UK</p>
+          </div>
+          </a>
+        </div>
+
+        <!-- descriptions -->
+        <div class="descriptions">
+
+          <!-- item1 -->
+          <div class="item">
+            <h3>Who we are</h3>
+            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of 
+              the day, going forward will have multiple touchpoints for offshoring.</p>
+          </div>
+
+          <!-- item2 -->
+          <div class="item">
+            <h3>Our philosophy</h3>
+            <p>A new normal that has evolved from generation X is on the runway heading towards a streamlined 
+              cloud solution. User generated content in real-time.</p>
+          </div>
+
+          <!-- item3 -->
+          <div class="item">
+            <h3>How we work</h3>
+            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. 
+              Override the digital divide with additional clickthroughs from DevOps.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <hr class="vertical" />
+
     </div>
   </body>
+
+  <!-- jquery link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script src="app.js"></script>
+
 </html>
