@@ -8,6 +8,7 @@ $Dark-pink: #E9204F;
 $Black: #101010;
 $Gray: #F3F3F3;
 $Light-Gray: #747474;
+$Very-Light-Gray: #E0E0E0;
 
 // HEADERS GLOBAL
 h1, h2, h3,
@@ -46,18 +47,14 @@ a.btn-address {
 }
 
 // SECTION WITH HEADER
-section>.header {
-
-    .words {
-        flex: 1;
-    }
+section .header {
 
     hr.small {
         border-width: 0px;
         height: 2px;
         width: 50px;
         margin-left: 0;
-        background-color: $Dark-pink;
+        background-color: $Dark-pink !important;
     }
 
     h2.services {

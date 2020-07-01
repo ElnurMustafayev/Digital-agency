@@ -6,7 +6,8 @@ html {
     body {
         font-family: $Trade-gothic;
 
-        *::selection, *:focus {
+        *::selection,
+        *:focus {
             outline: none;
             background-color: #86868642;
             color: black
@@ -16,6 +17,7 @@ html {
             text-decoration: none;
         }
 
+        // PAGE
         div.container {
             max-width: 1900px;
             margin: auto;
@@ -35,6 +37,7 @@ html {
                 display: flex;
                 height: 170px;
 
+                // logo
                 div.logo {
                     display: flex;
                     align-items: center;
@@ -47,6 +50,7 @@ html {
                     }
                 }
 
+                // navigation
                 nav {
                     font-weight: bold;
                     width: 100%;
@@ -83,7 +87,9 @@ html {
                             }
                         }
 
-                        li:hover, li:active, li:focus {
+                        li:hover,
+                        li:active,
+                        li:focus {
                             a::after {
                                 background-color: $Dark-pink;
                                 width: 70%;
@@ -126,7 +132,7 @@ html {
                 }
             }
 
-            // I T E M S
+            // S T A R T    S E C T I O N S
             section.items {
                 position: relative;
                 z-index: 1;
@@ -168,7 +174,9 @@ html {
                         margin: 0;
                     }
 
-                    &:hover, &:active, &:focus {
+                    &:hover,
+                    &:active,
+                    &:focus {
                         background-color: $Dark-pink;
 
                         i.fas,
@@ -232,7 +240,9 @@ html {
                             font-size: 28px;
                         }
 
-                        &:hover, &:active, &:focus {
+                        &:hover,
+                        &:active,
+                        &:focus {
                             background-color: $Dark-pink;
                             color: white;
                             padding: 0px 20px 0px 40px;
@@ -250,6 +260,7 @@ html {
             // W O R K S
             section.works {
 
+                // header
                 div.header {
                     padding: 0px 80px;
                     display: flex;
@@ -262,12 +273,15 @@ html {
                     a.btn-address {
                         color: black;
 
-                        &:hover, &:active, &:focus {
+                        &:hover,
+                        &:active,
+                        &:focus {
                             color: white;
                         }
                     }
                 }
 
+                // items
                 div.items {
                     display: flex;
                     flex-wrap: wrap;
@@ -290,7 +304,9 @@ html {
                             transition-duration: 0.2s;
                         }
 
-                        &:hover, &:active, &:focus {
+                        &:hover,
+                        &:active,
+                        &:focus {
 
                             img {
                                 filter: grayscale(0%);
@@ -325,7 +341,9 @@ html {
                             }
                         }
 
-                        &:hover, &:active, &:focus {
+                        &:hover,
+                        &:active,
+                        &:focus {
                             div.content {
                                 visibility: visible;
 
@@ -373,7 +391,9 @@ html {
                         position: relative;
                         overflow: hidden;
 
-                        &:hover, &:active, &:focus {
+                        &:hover,
+                        &:active,
+                        &:focus {
                             img {
                                 filter: grayscale(0%);
                             }
@@ -423,6 +443,76 @@ html {
                             color: $Light-Gray;
                         }
                     }
+                }
+            }
+
+            section.clients {
+                margin: 0px 80px;
+
+                hr {
+                    height:1px;
+                    border-width: 0;
+                    background-color: $Very-Light-Gray;
+                }
+
+                // what clients say
+                >.all-content {
+                    margin-bottom: 160px;
+                    display: flex;
+                    height: 620px;
+
+                    // image
+                    div.image {
+                        flex: 1;
+                        width: 40%;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    // content
+                    div.header {
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        >* {
+                            width: 80%;
+                        }
+
+                        .clients-content {
+                            p {
+                                color: $Light-Gray;
+                                font-size: 24px;
+                                word-spacing: 1px;
+                                padding: 20px;
+                                padding-left: 0;
+                                line-height: 35px;
+                            }
+
+                            hr {
+                                margin-left: 0;
+                                width: 50px;
+                            }
+
+                            h4 {
+                                text-transform: uppercase;
+                            }
+                        }
+
+                    }
+                }
+
+                // companies
+                .companies {
+                    margin: 40px 0px;
+                    display: flex;
+                    justify-content: space-between;
                 }
             }
         }

@@ -33,28 +33,22 @@ a.btn-address:hover::after, a.btn-address:active::after, a.btn-address:focus::af
   width: 100%;
 }
 
-section > .header .words {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-section > .header hr.small {
+section .header hr.small {
   border-width: 0px;
   height: 2px;
   width: 50px;
   margin-left: 0;
-  background-color: #E9204F;
+  background-color: #E9204F !important;
 }
 
-section > .header h2.services {
+section .header h2.services {
   color: #101010;
   font-size: 48px;
   font-weight: 900;
   margin: 0;
 }
 
-section > .header p.content {
+section .header p.content {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: -0.5px;
