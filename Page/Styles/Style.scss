@@ -13,10 +13,6 @@ html {
             color: black
         }
 
-        a {
-            text-decoration: none;
-        }
-
         // PAGE
         div.container {
             max-width: 1900px;
@@ -25,7 +21,7 @@ html {
             // S T A R T   B A C K G R O U N D
             div.header-bg {
                 background-color: black;
-                background-image: url("../Images/header_bg.jpg");
+                background-image: url("../Images/Bg/header_bg.jpg");
                 background-position: right;
                 background-repeat: no-repeat;
                 background-size: 800px;
@@ -75,6 +71,7 @@ html {
                             width: 0;
                             height: 2px;
                             bottom: -2px;
+                            opacity: 0;
                             left: 0;
                             background-color: white;
                             transition: 0.5s;
@@ -82,17 +79,18 @@ html {
 
                         a.selected {
                             &::after {
-                                background-color: $Dark-pink;
+                                background-color: $Dark-Pink;
                                 width: 70%;
                             }
                         }
-
+                        
                         li:hover,
                         li:active,
                         li:focus {
                             a::after {
-                                background-color: $Dark-pink;
+                                background-color: $Dark-Pink;
                                 width: 70%;
+                                opacity: 1;
                             }
                         }
                     }
@@ -120,7 +118,7 @@ html {
                         width: 70px;
                         margin: 0;
                         margin-bottom: 30px;
-                        background-color: $Dark-pink;
+                        background-color: $Dark-Pink;
                     }
 
                     h1 {
@@ -154,13 +152,13 @@ html {
                     margin: 20px;
 
                     hr {
-                        color: $Dark-pink;
+                        color: $Dark-Pink;
                         width: 20%;
                         margin-left: 0;
                     }
 
                     i.fas {
-                        color: $Dark-pink;
+                        color: $Dark-Pink;
                         font-size: 44px;
                     }
 
@@ -177,7 +175,7 @@ html {
                     &:hover,
                     &:active,
                     &:focus {
-                        background-color: $Dark-pink;
+                        background-color: $Dark-Pink;
 
                         i.fas,
                         hr {
@@ -187,7 +185,7 @@ html {
                 }
 
                 a.selected {
-                    background-color: $Dark-pink;
+                    background-color: $Dark-Pink;
 
                     i.fas,
                     hr {
@@ -243,14 +241,14 @@ html {
                         &:hover,
                         &:active,
                         &:focus {
-                            background-color: $Dark-pink;
+                            background-color: $Dark-Pink;
                             color: white;
                             padding: 0px 20px 0px 40px;
                         }
                     }
 
                     a.selected {
-                        background-color: $Dark-pink;
+                        background-color: $Dark-Pink;
                         color: white;
                         padding: 0px 20px 0px 40px;
                     }
@@ -363,7 +361,12 @@ html {
                 // header
                 .header {
                     display: flex;
+                    justify-content: space-between;
                     padding: 0px 80px;
+
+                    .words {
+                        flex: 1;
+                    }
 
                     p.about-content {
                         flex: 2;
@@ -446,11 +449,12 @@ html {
                 }
             }
 
+            // C L I E N T S
             section.clients {
                 margin: 0px 80px;
 
                 hr {
-                    height:1px;
+                    height: 1px;
                     border-width: 0;
                     background-color: $Very-Light-Gray;
                 }
@@ -513,6 +517,133 @@ html {
                     margin: 40px 0px;
                     display: flex;
                     justify-content: space-between;
+                }
+            }
+
+            // F O O T E R
+            footer {
+                position: relative;
+                margin-top: 100px;
+                background-color: $Dark-Gray;
+
+                // hr line
+                .hr-container {
+                    display: flex;
+                    justify-content: center;
+
+                    hr.in-footer {
+                        position: absolute;
+                        margin: auto;
+                        top: -25px;
+                    }
+                }
+
+                // let's talk
+                .lets-talk {
+                    padding: 140px 0px;
+                    display: grid;
+                    grid: 100px / repeat(3, 1fr);
+                    justify-items: center;
+                    align-items: center;
+
+                    // social
+                    .social {
+                        display: flex;
+
+                        a {
+                            margin-right: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 2px solid $Dark-Pink;
+                            border-radius: 50%;
+                            color: white;
+                            font-size: 24px;
+                            width: 48px;
+                            height: 48px;
+                            transition: 0.3s;
+
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                transform: translateY(-5px);
+                                color: $Dark-Pink;
+                            }
+                        }
+                    }
+
+                    // word
+                    h2.word {
+                        font-size: 48px;
+                        color: white;
+                    }
+                }
+
+                // phones
+                .phones {
+                    background-color: #161616;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 25px 80px;
+
+                    .item {
+                        text-align: center;
+                        transition: 0.3s;
+
+
+                        h4 {
+                            font-weight: 900;
+                        }
+
+                        * {
+                            margin: 5px 0px;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: $Dark-Pink;
+                        }
+                    }
+                }
+
+                // end
+                .footer-end {
+                    padding: 0px 80px;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: black;
+
+                    a {
+                        margin-left: 10px;
+                        position: relative;
+                        transition: 0.5s;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            left: 0;
+                            bottom: -2px;
+                            background-color: $Dark-Pink;
+                            transition: 0.5s;
+                        }
+
+                        &:hover {
+                            color: $Dark-Pink;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                    }
                 }
             }
         }

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
-h1, h2, h3,
-h4, h5, h6 {
+h1, h2, h3 {
   font-weight: 900;
 }
 
@@ -31,6 +30,11 @@ a.btn-address::after {
 
 a.btn-address:hover::after, a.btn-address:active::after, a.btn-address:focus::after {
   width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 section .header hr.small {
@@ -86,10 +90,6 @@ html body *:focus {
   color: black;
 }
 
-html body a {
-  text-decoration: none;
-}
-
 html body div.container {
   max-width: 1900px;
   margin: auto;
@@ -97,7 +97,7 @@ html body div.container {
 
 html body div.container div.header-bg {
   background-color: black;
-  background-image: url("../Images/header_bg.jpg");
+  background-image: url("../Images/Bg/header_bg.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: 800px;
@@ -162,6 +162,7 @@ html body div.container header nav ul a::after {
   width: 0;
   height: 2px;
   bottom: -2px;
+  opacity: 0;
   left: 0;
   background-color: white;
   -webkit-transition: 0.5s;
@@ -178,6 +179,7 @@ html body div.container header nav ul li:active a::after,
 html body div.container header nav ul li:focus a::after {
   background-color: #E9204F;
   width: 70%;
+  opacity: 1;
 }
 
 html body div.container section.header-content div.getting-started {
@@ -465,7 +467,16 @@ html body div.container section.about .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 80px;
+}
+
+html body div.container section.about .header .words {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 html body div.container section.about .header p.about-content {
@@ -643,5 +654,151 @@ html body div.container section.clients .companies {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+html body div.container footer {
+  position: relative;
+  margin-top: 100px;
+  background-color: #1b1b1b;
+}
+
+html body div.container footer .hr-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body div.container footer .hr-container hr.in-footer {
+  position: absolute;
+  margin: auto;
+  top: -25px;
+}
+
+html body div.container footer .lets-talk {
+  padding: 140px 0px;
+  display: -ms-grid;
+  display: grid;
+  grid: 100px/repeat(3, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body div.container footer .lets-talk .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body div.container footer .lets-talk .social a {
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #E9204F;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body div.container footer .lets-talk .social a:hover, html body div.container footer .lets-talk .social a:active, html body div.container footer .lets-talk .social a:focus {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  color: #E9204F;
+}
+
+html body div.container footer .lets-talk h2.word {
+  font-size: 48px;
+  color: white;
+}
+
+html body div.container footer .phones {
+  background-color: #161616;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px 80px;
+}
+
+html body div.container footer .phones .item {
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body div.container footer .phones .item h4 {
+  font-weight: 900;
+}
+
+html body div.container footer .phones .item * {
+  margin: 5px 0px;
+}
+
+html body div.container footer .phones .item:hover, html body div.container footer .phones .item:focus, html body div.container footer .phones .item:active {
+  color: #E9204F;
+}
+
+html body div.container footer .footer-end {
+  padding: 0px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+}
+
+html body div.container footer .footer-end a {
+  margin-left: 10px;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+html body div.container footer .footer-end a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #E9204F;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+html body div.container footer .footer-end a:hover {
+  color: #E9204F;
+}
+
+html body div.container footer .footer-end a:hover::after {
+  width: 100%;
+}
+
+html body div.container footer .footer-end .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=Style.css.map */

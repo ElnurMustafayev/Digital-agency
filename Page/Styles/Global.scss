@@ -4,21 +4,21 @@
 $Trade-gothic: 'Lato', sans-serif;
 
 // COLORS
-$Dark-pink: #E9204F;
+$Dark-Pink: #E9204F;
 $Black: #101010;
 $Gray: #F3F3F3;
 $Light-Gray: #747474;
 $Very-Light-Gray: #E0E0E0;
+$Dark-Gray: #1b1b1b;
 
 // HEADERS GLOBAL
-h1, h2, h3,
-h4, h5, h6 {
+h1, h2, h3 {
     font-weight: 900;
 }
 
 // BUTTON WITH FILL
 a.btn-address {
-    border: 2px solid $Dark-pink;
+    border: 2px solid $Dark-Pink;
     color: white;
     padding: 15px 30px;
     position: relative;
@@ -28,7 +28,7 @@ a.btn-address {
     &::after {
         content: '';
         width: 0%;
-        background-color: $Dark-pink;
+        background-color: $Dark-Pink;
         position: absolute;
         z-index: -1;
         left: 0;
@@ -46,6 +46,11 @@ a.btn-address {
     }
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 // SECTION WITH HEADER
 section .header {
 
@@ -54,7 +59,7 @@ section .header {
         height: 2px;
         width: 50px;
         margin-left: 0;
-        background-color: $Dark-pink !important;
+        background-color: $Dark-Pink !important;
     }
 
     h2.services {
@@ -68,7 +73,7 @@ section .header {
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: -0.5px;
-        color: $Dark-pink;
+        color: $Dark-Pink;
         margin: 0;
     }
 }
@@ -79,5 +84,5 @@ hr.vertical {
     height: 60px;
     margin: 70px auto;
     width: 2px;
-    background-color: $Dark-pink;
+    background-color: $Dark-Pink;
 }
