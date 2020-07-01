@@ -172,6 +172,7 @@ html body div.container header nav ul a::after {
 html body div.container header nav ul a.selected::after {
   background-color: #E9204F;
   width: 70%;
+  opacity: 1;
 }
 
 html body div.container header nav ul li:hover a::after,
