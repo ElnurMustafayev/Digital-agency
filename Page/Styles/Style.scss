@@ -215,12 +215,11 @@ html {
 
                 div.services-grid {
                     margin-top: 70px;
-                    height: 370px;
                     display: grid;
-                    grid: repeat(3, 1fr) / repeat(3, 1fr);
+                    grid: repeat(3, 100px) / repeat(3, 1fr);
                     gap: 30px;
 
-                    a.item {
+                    .item {
                         color: $Black;
                         background-color: $Gray;
                         display: flex;
@@ -646,6 +645,33 @@ html {
                         display: flex;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    section.items {
+        flex-direction: column;
+    }
+
+    section.services {
+        display: block;
+
+        .services-grid {
+            grid: repeat(9, 80px) / repeat(1, 1fr) !important;
+        }
+    }
+
+    section.works {
+
+        .items {
+            flex-direction: column;
+            align-items: center;
+
+            .item {
+                margin: 20px 0;
+                width: 80% !important;
             }
         }
     }

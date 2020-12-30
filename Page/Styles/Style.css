@@ -309,14 +309,13 @@ html body div.container section.services {
 
 html body div.container section.services div.services-grid {
   margin-top: 70px;
-  height: 370px;
   display: -ms-grid;
   display: grid;
-  grid: repeat(3, 1fr)/repeat(3, 1fr);
+  grid: repeat(3, 100px)/repeat(3, 1fr);
   gap: 30px;
 }
 
-html body div.container section.services div.services-grid a.item {
+html body div.container section.services div.services-grid .item {
   color: #101010;
   background-color: #F3F3F3;
   display: -webkit-box;
@@ -330,7 +329,7 @@ html body div.container section.services div.services-grid a.item {
           transition-duration: 0.3s;
 }
 
-html body div.container section.services div.services-grid a.item h3.service {
+html body div.container section.services div.services-grid .item h3.service {
   font-size: 20px;
   font-weight: 900;
   margin: 0;
@@ -339,11 +338,11 @@ html body div.container section.services div.services-grid a.item h3.service {
           flex: 1;
 }
 
-html body div.container section.services div.services-grid a.item i.fas {
+html body div.container section.services div.services-grid .item i.fas {
   font-size: 28px;
 }
 
-html body div.container section.services div.services-grid a.item:hover, html body div.container section.services div.services-grid a.item:active, html body div.container section.services div.services-grid a.item:focus {
+html body div.container section.services div.services-grid .item:hover, html body div.container section.services div.services-grid .item:active, html body div.container section.services div.services-grid .item:focus {
   background-color: #E9204F;
   color: white;
   padding: 0px 20px 0px 40px;
@@ -801,5 +800,33 @@ html body div.container footer .footer-end .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1080px) {
+  section.items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.services {
+    display: block;
+  }
+  section.services .services-grid {
+    grid: repeat(9, 80px)/repeat(1, 1fr) !important;
+  }
+  section.works .items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works .items .item {
+    margin: 20px 0;
+    width: 80% !important;
+  }
 }
 /*# sourceMappingURL=Style.css.map */
